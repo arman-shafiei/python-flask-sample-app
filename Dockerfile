@@ -5,12 +5,10 @@ ENV FLASK_ENV=development
 
 WORKDIR /app
 
-COPY requirements.txt .
-COPY setup.py .
+COPY . .
 
 RUN pip install --editable .
 
-COPY . .
 
 RUN flask init-db
 
