@@ -6,6 +6,7 @@ ENV FLASK_ENV=development
 WORKDIR /app
 
 COPY requirements.txt .
+COPY setup.py .
 
 RUN pip install --editable .
 
