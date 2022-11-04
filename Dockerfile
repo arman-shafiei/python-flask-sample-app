@@ -1,11 +1,13 @@
-FROM python:3.8.2-alpine3.11
+FROM python:3.8.2-alpine
 
 ENV FLASK_APP=flaskr
 ENV FLASK_ENV=development
 
-COPY . /app
-
 WORKDIR /app
+
+COPY requirements.txt .
+
+COPY . .
 
 RUN pip install --editable .
 
